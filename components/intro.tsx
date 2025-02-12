@@ -59,14 +59,16 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-0 sm:px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-white max-w-[50rem] mx-auto"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <span className="font-bold">Hello, I'm Md Sazzad Hossain.</span> I'm a{" "}
-        <span className="font-bold">Machine Learning engineer</span> at{" "}
-        <span className="font-bold">Devolved AI</span> in Dhaka. I'm currently working with Large Language Model, Model Training , finetuning and deployment.
-      </motion.h1>
+  className="mb-12 mt-8 px-2 sm:px-4 text-xl sm:text-xl font-Georgia font-medium !leading-[1.4] text-white max-w-[50rem] mx-auto "
+  initial={{ opacity: 0, y: 80 }}
+  animate={{ opacity: 1, y: 0, transition: { duration: 1.2 } }}
+>
+  <span className="font-bold"> Hello, I'm Md Sazzad Hossain.</span>
+  <span className="font-semibold"> Machine Learning Engineer at Devolved AI, Dhaka.</span>
+  <span className="font-semibold"> Specializing in Large Language Models, Model Training, Finetuning, and Deployment.</span>
+</motion.h1>
+
+
 
       <motion.div
         className="flex flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
