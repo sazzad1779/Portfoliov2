@@ -1,13 +1,11 @@
 {
-  "homepage": "https://sazzad1779.github.io/Portfolio",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
-    "deploy": "next build && next export && touch out/.nojekyll && gh-pages -d out"
+    "start": "next start" 
   },
   "dependencies": {
     "@iconify/react": "^4.1.1",
