@@ -1,6 +1,8 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import cryptoCrowdImg from "@/public/cryptocrowd2.png";
+// import { Ollama } from '@lobehub/icons';
+import AgentSyncImg from "@/public/AgentSync.png";
+import FattahArcImg from "@/public/fattah_architecture.png";
 import ozdevsImg from "@/public/ozdevs-two.png";
 import assetTradingImg from "@/public/asset-trading.jpg";
 import euphorusImg from "@/public/euphorus-two.png";
@@ -59,136 +61,100 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CryptoCrowd",
+    title: "AgentSync",
     description:
-      "Cryptocurrency sentiment analysis website based on Twitter posts. Users can see the overall sentiment (positive, negative or neutral) of different Cryptocurrencies based on what people are currently posting on Twitter. Users can also see keywords and an average sentiment score. Stateless application that uses Elasticache and S3 on AWS. It also used EC2 and auto-scaling to manage demand.",
-    tags: ["Python", "Transformers", "Express.js", "AWS"],
+    "AgentSync is a production-ready AI agent framework designed to manage and automate complex tasks efficiently. With its Supervisor Agent module, it acts like an AI-powered manager—orchestrating multiple agents, handling workflows, and integrating with various tools like Gmail, Google Sheets, and web search utilities.",
+    tags: ["Python", "LangGraph", "Large Language Modle", "AI Agents"],
+    icons: [
+      "logos:python",
+      "logos:LangGraph",
+      "logos:llm",
+    ],
+    imageUrl: AgentSyncImg,
+    githubLink: "https://github.com/sazzad1779/AgentSync",
+    // demoLink: "https://www.youtube.com/watch?v=uhyC0M4WIl4",
+  },
+  {
+    title: "Fattah SLM: A Bengali Small Language Model.",
+    description:
+    "This is a custom Transformers architecture designed specifically as a compact Bengali language model. For this project, I developed a custom tokenizer optimized exclusively for processing Bengali text, ensuring efficient and accurate representation of the language.",
+    tags: ["Python", "Transformers"],
     icons: [
       "logos:transformer",
       "logos:python",
-      "logos:react",
-      "logos:bootstrap",
-      "logos:express",
     ],
-    imageUrl: cryptoCrowdImg,
-    githubLink: "https://github.com/ben04rogers/cab432-assignment-2",
-    demoLink: "https://www.youtube.com/watch?v=uhyC0M4WIl4",
+    imageUrl: FattahArcImg,
+    githubLink: "https://github.com/sazzad1779/Fattah_SLM",
   },
-  // {
-  //   title: "OzDevs",
-  //   description:
-  //     "Reverse Job board for companies looking to hire developers in Australia. Filter by experience, location and keyboards.  Companies can pay a monthly fee to be able to message developers on the site and view their information.",
-  //   tags: ["PHP", "Laravel", "JavaScript", "Tailwind", "MySQL"],
-  //   icons: [
-  //     "logos:laravel",
-  //     "logos:php",
-  //     "logos:javascript",
-  //     "devicon:tailwindcss",
-  //     "logos:mysql",
-  //   ],
-  //   imageUrl: ozdevsImg,
-  //   urlLink: "https://clownfish-app-48u2r.ondigitalocean.app/",
-  //   githubLink: "https://github.com/ben04rogers/ozdevs-v2",
-  // },
-  // {
-  //   title: "Company Asset Trading",
-  //   description:
-  //     "Client-server system written in Java for trading of virtual assets within departments of a company. Facilitated trades via a marketplace model where users can buy and sell assets. Admins of an organisation can create assets, users and modify details. Uses MariaDB as a database and Swing for the GUI.",
-  //   tags: ["Java", "MariaDB", "Swing"],
-  //   icons: ["logos:java", "logos:mariadb-icon"],
-  //   imageUrl: assetTradingImg,
-  //   githubLink: "https://github.com/ben04rogers/organisation-asset-trading",
-  // },
-  // // {
-  // //   title: "Euphorus",
-  // //   description:
-  // //     "React application for viewing country happiness data collected from the World Happiness Report initiative. Users can filter by year, country and search limit. AG Grid and Chart.js were used to present the data.",
-  // //   tags: ["JavaScript", "React", "Bootstrap"],
-  // //   icons: ["logos:javascript", "logos:react", "logos:bootstrap"],
-  // //   imageUrl: euphorusImg,
-  // //   githubLink: "https://github.com/ben04rogers/cab230assignment1",
-  // // },
-  // // {
-  // //   title: "Country Happiness API",
-  // //   description:
-  // //     "Developed and deployed an Express API to support the front-end of the Euphorus Happiness Data web application. Routes support query parameters and authorization using JWT. Includes endpoints for countries, rankings, factors, registration, login, and profile. Tested software extensively with Jest and created Swagger documentation for the API as well.      ",
-  // //   tags: ["JavaScript", "Node.js", "Express.js", "Swagger", "MySQL"],
-  // //   icons: ["logos:javascript", "logos:express", "logos:swagger", "cib:mysql"],
-  // //   imageUrl: euphorusBackendImg,
-  // //   githubLink: "https://github.com/ben04rogers/cab230assignment2",
-  // // },
-  // {
-  //   title: "Techprowl Computer Auction",
-  //   description:
-  //     "Computer auction application built with Flask. The site allows users to register, bid on items, leave reviews, post new listings, manage listings, search by keyword, and keep a watch list. ",
-  //   tags: ["Python", "Flask", "Bootstrap", "SQLite"],
-  //   icons: ["logos:python", "logos:bootstrap", "logos:sqlite"],
-  //   imageUrl: techprowlImg,
-  //   githubLink: "https://github.com/ben04rogers/computer-auction",
-  //   urlLink: "https://techprowl.herokuapp.com",
-  // },
-  // {
-  //   title: "Task Manager Console App",
-  //   description:
-  //     "Console app that manages tasks in a project. Users can load projects from a file and generate a seqeuence to complete them in, based on each task's dependencies. Users can also find earliest possible commencement time of each task, add new tasks, update tasks, remove tasks, and save the results to a text file.",
-  //   tags: ["C#"],
-  //   icons: ["devicon:csharp"],
-  //   imageUrl: taskManagerImg,
-  //   githubLink: "https://github.com/ben04rogers/task-manager",
-  // },
-  // {
-  //   title: "Family Tree Shortest Path",
-  //   description:
-  //     "Python program that implements a breadth-first search algorithm to generate a minimal spanning tree. Problem was to calculate a shortest path from a starting vertex in a graph to each other vertex. The vertices represent people and each person is related to every other person through parent-child relationships. A person can see how they are related to each other person in the tree",
-  //   tags: ["Python"],
-  //   icons: ["logos:python"],
-  //   imageUrl: familyTreeImg,
-  //   githubLink: "https://github.com/ben04rogers/breadth-first-search",
-  //   demoLink: "https://www.youtube.com/watch?v=VXCZKsqupxA",
-  // },
-  // {
-  //   title: "Arduino Binary Game",
-  //   description:
-  //     "Binary game written in C that runs on an Arduino Uno using Tinkercad. The game aims to help users learn binary by challenging them to input different integers in their binary form within a time limit.",
-  //   tags: ["C"],
-  //   icons: ["devicon:c"],
-  //   imageUrl: binaryGameImg,
-  //   githubLink: "https://github.com/ben04rogers/binary-game-microcontroller",
-  //   demoLink: "https://www.youtube.com/watch?v=A6n6XDk4Unw&feature=youtu.be",
-  // },
+  {
+    title: "Fattah SLM: A Bengali Small Language Model.",
+    description:
+    "This is a custom Transformers architecture designed specifically as a compact Bengali language model. For this project, I developed a custom tokenizer optimized exclusively for processing Bengali text, ensuring efficient and accurate representation of the language.",
+    tags: ["Python", "Transformers"],
+    icons: [
+      "logos:transformer",
+      "logos:python",
+    ],
+    imageUrl: FattahArcImg,
+    githubLink: "https://github.com/sazzad1779/Fattah_SLM",
+  },
+  {
+    title: "Background Remover Module Using U2Net.",
+    description:
+    "This repository is an easy example of background removal. I'm using U2Net model for creating musk and add some custom background. The main repo of this code is https://github.com/axinc-ai/ailia-models-tflite.",
+    tags: ["Python", "Transformers"],
+    icons: [
+      "logos:transformer",
+      "logos:python",
+    ],
+    imageUrl: FattahArcImg,
+    githubLink: "https://github.com/sazzad1779/Background_remover_using_u2net_",
+  },
 ] as const;
 
 export const skillsData = [
   {
-    name: "JavaScript",
-    icon: "logos:javascript",
-  },
-  {
-    name: "TypeScript",
-    icon: "logos:typescript-icon",
-  },
-  {
-    name: "React",
-    icon: "logos:react",
-  },
-  {
-    name: "Node.js",
-    icon: "logos:nodejs-icon",
-  },
-  {
-    name: "PHP",
-    icon: "logos:php",
-  },
-  {
-    name: "Laravel",
-    icon: "logos:laravel",
-  },
-  {
-    name: "Symfony",
-    icon: "logos:symfony",
-  },
-  {
     name: "Python",
+    icon: "logos:python",
+  },
+  {
+    name: "C++",
+    icon: "/icons/cpp.png",
+  },
+  {
+    name: "Pytorch",
+    icon: "logos:pytorch-icon",
+  },
+  {
+    name: "Pandas",
+    icon: "logos:pandas-icon",
+  },,
+  {
+    name: "Transformers",
+    icon:"/icons/huggingface-color.svg",
+  },
+  {
+    name: "Dask",
+    icon: "/icons/dask_icon.webp",
+  },
+  {
+    name: "SciPy",
+    icon: "devicon:scipy",
+  },
+  {
+    name: "Ollama",
+    icon: "/icons/ollama.svg",
+  },
+  {
+    name: "Chroma DB",
+    icon: "/icons/chroma-seeklogo.png",
+  },
+  {
+    name: "DeepEval",
+    icon: "/icons/deepeval.png",
+  },
+  {
+    name: "Uptrain",
     icon: "logos:python",
   },
   {
@@ -234,5 +200,9 @@ export const skillsData = [
   {
     name: "Shopify",
     icon: "logos:shopify",
+  },
+  {
+    name: "Node.js",
+    icon: "logos:nodejs-icon",
   },
 ] as const;
