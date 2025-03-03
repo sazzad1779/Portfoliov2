@@ -50,23 +50,16 @@ export default function Skills() {
             }}
             custom={index}
           >
-            {/* Check if the icon is an image or Iconify icon */}
-            {skill.icon.startsWith("/") ? (
+            {/* Ensure skill is defined before accessing its properties */}
+            {skill?.icon?.startsWith("/") ? (
               // If it's a path to an image (local image)
-              <Image
-                src={skill.icon}
-                alt={skill.name}
-                width={80}
-                height={80}
-              />
-            ) : (
-              // If it's an Iconify icon
-              <Icon
-                icon={skill.icon}
-                className="text-5xl md:text-7xl"
-              />
-            )}
-            <span className="mt-2">{skill.name}</span>
+              <Image src={skill.icon} alt={skill.name} width={80} height={80} />
+            ) : // If it's an Iconify icon
+            skill?.icon ? (
+              <Icon icon={skill.icon} className="text-5xl md:text-7xl" />
+            ) : null // Return nothing if icon is undefined
+            }
+            <span className="mt-2">{skill?.name}</span>
           </motion.li>
         ))}
       </ul>
