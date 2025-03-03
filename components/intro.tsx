@@ -4,7 +4,8 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import { BsLinkedin } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaMedium, FaKaggle, FaRobot } from "react-icons/fa";
+// import { SiHuggingface } from "react-icons/si";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import ParticleContainer from "./particle-container";
@@ -59,17 +60,14 @@ export default function Intro() {
       </div>
 
       <motion.h1
-  className="mb-12 mt-8 px-2 sm:px-4 text-xl sm:text-xl font-Georgia font-medium !leading-[1.4] text-white max-w-[50rem] mx-auto "
-  initial={{ opacity: 0, y: 80 }}
-  animate={{ opacity: 1, y: 0, transition: { duration: 1.2 } }}
->
-  <span className="font-bold"> Hello, I'm Md Sazzad Hossain.</span>
-  <span className="font-semibold"> Machine Learning Engineer at Devolved AI, Dhaka.</span>
-  <span className="font-semibold"> Specializing in Large Language Models, Model Training, Finetuning, and Deployment.</span>
-</motion.h1>
-
-
-
+      className="mb-12 mt-8 px-2 sm:px-4 text-xl sm:text-xl font-Georgia font-medium !leading-[1.4] text-white max-w-[50rem] mx-auto "
+      initial={{ opacity: 0, y: 80 }}
+      animate={{ opacity: 1, y: 0, transition: { duration: 1.2 } }}
+    >
+      <span className="font-bold"> Hello, I'm Md Sazzad Hossain.</span>
+      <span className="font-semibold"> Machine Learning Engineer at Devolved AI, Dhaka.</span>
+      <span className="font-semibold"> Specializing in Large Language Models, Model Training, Finetuning, and Deployment.</span>
+    </motion.h1>
       <motion.div
         className="flex flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
@@ -79,7 +77,7 @@ export default function Intro() {
         }}
       >
         <a
-          className="group bg-gray-950 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40"
+          className="group bg-gray-950 text-white px-5 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40"
           href="https://github.com/sazzad1779"
           target="_blank"
         >
@@ -87,13 +85,43 @@ export default function Intro() {
         </a>
 
         <a
-          className="group bg-gray-950 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40"
+          className="group bg-gray-950 text-white px-5 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40"
           href="https://www.linkedin.com/in/sazzad1779/"
           target="_blank"
         >
           <span className="opacity-70">LinkedIn</span>
           <BsLinkedin className="opacity-70" />
         </a>
+
+        <a
+          className="group bg-gray-950 text-white px-5 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40"
+          href="https://medium.com/@sazzad1779"
+          target="_blank"
+        >
+          <span className="opacity-70">Medium</span>
+          <FaMedium className="opacity-70" />
+        </a>
+        
+        <a
+          className="group bg-gray-950 text-white px-5 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40"
+          href="https://www.kaggle.com/mdsazzad1779"
+          target="_blank"
+        >
+          <span className="opacity-70">Kaggle</span>
+          <FaKaggle className="opacity-70" />
+        </a>
+        <a
+          className="group bg-gray-950 text-white px-5 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40"
+          href="https://huggingface.co/sha1779"
+          target="_blank"
+        >
+          <span className="opacity-70">HuggingFace</span>
+          <FaRobot className="opacity-70" />
+        </a>
+
+
+
+
       </motion.div>
     </section>
   );

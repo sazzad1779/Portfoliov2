@@ -3,6 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 // import { Ollama } from '@lobehub/icons';
 import AgentSyncImg from "@/public/AgentSync.png";
 import FattahArcImg from "@/public/fattah_architecture.png";
+import backgroundRemvImg from "@/public/background_remover.png";
 import ozdevsImg from "@/public/ozdevs-two.png";
 import assetTradingImg from "@/public/asset-trading.jpg";
 import euphorusImg from "@/public/euphorus-two.png";
@@ -107,7 +108,7 @@ export const projectsData = [
       "logos:transformer",
       "logos:python",
     ],
-    imageUrl: FattahArcImg,
+    imageUrl: backgroundRemvImg,
     githubLink: "https://github.com/sazzad1779/Background_remover_using_u2net_",
   },
 ] as const;
