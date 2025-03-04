@@ -3,6 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 // import { Ollama } from '@lobehub/icons';
 import AgentSyncImg from "@/public/AgentSync.png";
 import FattahArcImg from "@/public/fattah_architecture.png";
+import speechtospeech_archImg from "@/public/speechtospeech_architecture.png";
 import backgroundRemvImg from "@/public/background_remover.png";
 import ozdevsImg from "@/public/ozdevs-two.png";
 import assetTradingImg from "@/public/asset-trading.jpg";
@@ -88,16 +89,17 @@ export const projectsData = [
     githubLink: "https://github.com/sazzad1779/Fattah_SLM",
   },
   {
-    title: "Fattah SLM: A Bengali Small Language Model.",
+    title: "Speech-to-Speech Chatbot",
     description:
-    "This is a custom Transformers architecture designed specifically as a compact Bengali language model. For this project, I developed a custom tokenizer optimized exclusively for processing Bengali text, ensuring efficient and accurate representation of the language.",
+    "This project is a real-time speech-to-speech chatbot that enables seamless voice-based interactions. It utilizes Automatic Speech Recognition (ASR), Voice Activity Detection (VAD), a Large Language Model (LLM), and Text-to-Speech (TTS) for a complete conversational experience.",
     tags: ["Python", "Transformers"],
     icons: [
-      "logos:transformer",
       "logos:python",
+      "/icons/huggingface-color.svg",
+      "/icons/flask.png",
     ],
-    imageUrl: FattahArcImg,
-    githubLink: "https://github.com/sazzad1779/Fattah_SLM",
+    imageUrl: speechtospeech_archImg,
+    githubLink: "https://github.com/sazzad1779/SpeechToSpeechChatBot",
   },
   {
     title: "Background Remover Module Using U2Net.",
@@ -159,8 +161,12 @@ export const skillsData = [
     icon: "logos:python",
   },
   {
-    name: "Java",
-    icon: "logos:java",
+    name: "Fastapi",
+    icon: "/icons/fastapi.svg",
+  },
+  {
+    name: "Flask",
+    icon: "/icons/flask.png",
   },
   {
     name: "HTML",

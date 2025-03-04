@@ -53,7 +53,11 @@ export default function Project({
               Made with:{" "}
             </p>
             {icons.map((icon, iconIndex) => (
-              <Icon key={iconIndex} icon={icon} className="mr-3 text-2xl" />
+              icon.startsWith("/") ? (
+                <img key={iconIndex} src={icon} alt="icon" className="mr-3 w-6 h-6" />
+              ) : (
+                <Icon key={iconIndex} icon={icon} className="mr-3 text-2xl" />
+              )
             ))}
           </ul>
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 mb-3">
