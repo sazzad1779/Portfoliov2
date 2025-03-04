@@ -60,9 +60,22 @@ export default function Project({
               )
             ))}
           </ul>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 mb-3">
+          <p
+            className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 mb-3 text-justify"
+            
+          >
             {description}
           </p>
+
+          <Image
+          src={imageUrl}
+          alt="Project I worked on"
+          quality={95}
+          className="lg:absolute  lg:block top-[60px] right-2 w-[25.25rem] rounded-t-lg shadow-2xl scale-[1.0]
+          transition
+          lg:scale-[1.1]
+          "
+        />
           <div className="flex">
             {urlLink && (
               <a
@@ -100,15 +113,7 @@ export default function Project({
           </div>
         </div>
 
-        <Image
-          src={imageUrl}
-          alt="Project I worked on"
-          quality={95}
-          className="absolute hidden lg:block top-[60px] -right-10 w-[28.25rem] rounded-t-lg shadow-2xl scale-[1.0]
-          transition
-          lg:scale-[1.1]
-          "
-        />
+        
       </section>
     </motion.div>
   );

@@ -4,9 +4,7 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import { sendEmail } from "@/actions/sendEmail";
-// import SubmitBtn from "./submit-btn";
-import toast from "react-hot-toast";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"; // Importing icons
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -15,60 +13,49 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
+      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center px-4"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
     >
-      <SectionHeading>Contact me</SectionHeading>
+      <SectionHeading>Contact Me</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please contact me directly at{" "}
-        <a className="underline" href="mailto:example@gmail.com">
+        Feel free to reach out via email at{" "}
+        <a className="underline" href="mailto:sazzad1779@gmail.com">
           sazzad1779@gmail.com
         </a>{" "}
-        or through this form.
+        or connect with me on social media.
       </p>
 
-      <form
-        className="mt-10 flex flex-col dark:text-black"
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
-
-          if (error) {
-            toast.error(error);
-            return;
-          }
-
-          toast.success("Email sent successfully!");
-        }}
-      >
-        <input
-          className="h-14 px-4 rounded-lg borderBlack opacity10  dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-          name="senderEmail"
-          type="email"
-          required
-          maxLength={500}
-          placeholder="Your email"
-        />
-        <textarea
-          className="h-52 my-3 rounded-lg borderBlack opacity10  p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-          name="message"
-          placeholder="Your message"
-          required
-          maxLength={5000}
-        />
-        {/* <SubmitBtn /> */}
-      </form>
+      {/* Social Media Links */}
+      <div className="mt-6 flex justify-center gap-6 text-gray-700 dark:text-white/80">
+        <a
+          href="https://github.com/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-blue-500 transition"
+        >
+          <FaGithub size={32} />
+        </a>
+        <a
+          href="https://linkedin.com/in/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-blue-500 transition"
+        >
+          <FaLinkedin size={32} />
+        </a>
+        <a
+          href="https://twitter.com/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-blue-500 transition"
+        >
+          <FaTwitter size={32} />
+        </a>
+      </div>
     </motion.section>
   );
 }

@@ -1,23 +1,19 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-// import { Ollama } from '@lobehub/icons';
 import AgentSyncImg from "@/public/AgentSync.png";
 import FattahArcImg from "@/public/fattah_architecture.png";
 import speechtospeech_archImg from "@/public/speechtospeech_architecture.png";
 import backgroundRemvImg from "@/public/background_remover.png";
-import ozdevsImg from "@/public/ozdevs-two.png";
-import assetTradingImg from "@/public/asset-trading.jpg";
-import euphorusImg from "@/public/euphorus-two.png";
-import euphorusBackendImg from "@/public/euphorus-backend.png";
-import techprowlImg from "@/public/techprowl-two.png";
-import taskManagerImg from "@/public/task-manager.png";
-import familyTreeImg from "@/public/bfsproject.jpg";
-import binaryGameImg from "@/public//binary-game.png";
+
 
 export const links = [
   {
     name: "Home",
     hash: "#home",
+  },
+  {
+    name: "Experience",
+    hash: "#experience",
   },
   {
     name: "Projects",
@@ -26,10 +22,6 @@ export const links = [
   {
     name: "Skills",
     hash: "#skills",
-  },
-  {
-    name: "Experience",
-    hash: "#experience",
   },
   {
     name: "Education",
@@ -44,17 +36,32 @@ export const links = [
 export const experiencesData = [
   {
     title: "Machine Learning Engineer",
-    location: "Devolved AI - Uttara,Dhaka-BD",
-    description:
-      "Front-end development for a variety of Shopify stores such as FitazFK, Rider Collective, Masseuse Massage, Francesca Jewellery and Salty Captain. Developed high quality landing pages and front end features using HTML, CSS, SCSS, JavaScript and Liquid.",
+    location: "Devolved AI - Uttara, Dhaka-BD",
+    description: `Responsibilities:
+                  1. Develop, deploy, and optimize advanced machine learning models and algorithms tailored for AI-driven applications.
+                  2. Collaborate with data science teams to analyze and preprocess large-scale datasets for training and inference.
+                  3. Design and implement scalable machine learning pipelines to support efficient training and production-grade inference.
+                  4. Fine-tune and enhance models to maximize performance, accuracy, and robustness.
+                  5. Work closely with software engineering teams to seamlessly integrate AI models into production systems.
+                  6. Conduct rigorous experiments, evaluate model performance, and iterate to achieve continuous improvements.
+                  7. Stay informed on cutting-edge advancements in AI, including decentralized and federated learning techniques.
+                  8. Ensure AI solutions are scalable, reliable, and optimized for efficiency.
+                  9. Partner with cross-functional teams to identify, define, and prioritize AI-driven requirements and opportunities.`,
     icon: React.createElement(CgWorkAlt),
     date: "March 2024 - Current",
   },
   {
     title: "Software Engineer",
     location: "Cloud-Coder Ltd. - Gulshan-2,Dhaka,BD",
-    description:
-      "Developed new features using Laravel, Vue.js, PHP, JavaScript, Tailwind CSS, MySQL and REST APIs. Created an email notification system for mechants to receive weekly/monthly summaries of YouPay carts created, paid and cancelled. I also integrated YouPay into dozens of stores.",
+    description:`Responsibilities:  
+                  1. Led the development of "RoyalGPT," a Bangla Language Model, advancing NLP for regional languages and contributing to open-source projects.
+                  2. Developed the "SpeechToSpeech" project utilizing Bengali ASR and TTS models, integrated with the RoyalGPT Bangla Language Model.
+                  3. Designed and implemented a Retrieval-Augmented Generation (RAG) system for RoyalGPT, enhancing its ability to retrieve and generate contextually relevant information.
+                  4. Designed and built an ASR system for Bengali regional dialects.
+                  5. Engineered a real-time television ad and channel detection system using detection models, optimizing performance with advanced hashing techniques for faster processing.
+                  6. Designed and deployed a dynamic digital signage system in shopping malls, leveraging human behavior analysis to deliver personalized product information and promotions.
+                  7. Developed a multi-camera security surveillance system for real-time tracking of human and vehicle movements, enhancing security and operational efficiency.
+                  8. Designed a RISC-V vector extension compiler in C, optimizing performance and extending functionality for RISC-V architecture in embedded systems.` , 
     icon: React.createElement(CgWorkAlt),
     date: "January 2022 - February 2024",
   },
@@ -129,28 +136,20 @@ export const skillsData = [
     icon: "logos:pytorch-icon",
   },
   {
-    name: "Pandas",
-    icon: "logos:pandas-icon",
-  },,
-  {
     name: "Transformers",
     icon:"/icons/huggingface-color.svg",
-  },
-  {
-    name: "Dask",
-    icon: "/icons/dask_icon.webp",
-  },
-  {
-    name: "SciPy",
-    icon: "devicon:scipy",
   },
   {
     name: "Ollama",
     icon: "/icons/ollama.svg",
   },
   {
-    name: "Chroma DB",
-    icon: "/icons/chroma-seeklogo.png",
+    name: "LlamaIndex",
+    icon: "/icons/llamaindex.jpeg",
+  },
+  {
+    name: "Langchain",
+    icon: "/icons/langchain_logo.png",
   },
   {
     name: "DeepEval",
@@ -158,58 +157,50 @@ export const skillsData = [
   },
   {
     name: "Uptrain",
-    icon: "logos:python",
-  },
-  {
-    name: "Fastapi",
-    icon: "/icons/fastapi.svg",
-  },
-  {
-    name: "Flask",
-    icon: "/icons/flask.png",
-  },
-  {
-    name: "HTML",
-    icon: "vscode-icons:file-type-html",
-  },
-  {
-    name: "CSS",
-    icon: "vscode-icons:file-type-css",
-  },
-  {
-    name: "SCSS",
-    icon: "logos:sass",
+    icon: "/icons/uptrain.jpeg",
   },
   {
     name: "Git",
     icon: "logos:git-icon",
   },
   {
-    name: "MySQL",
-    icon: "logos:mysql",
+    name: "DVC",
+    icon: "/icons/dvc.svg",
   },
   {
-    name: "Linux",
-    icon: "flat-color-icons:linux",
-  },
-  {
-    name: "AWS",
-    icon: "logos:aws",
+    name: "MlFlow",
+    icon: "/icons/mlflow.webp",
   },
   {
     name: "Docker",
     icon: "logos:docker-icon",
   },
   {
-    name: "Jenkins",
-    icon: "devicon:jenkins",
+    name: "GitActions",
+    icon: "/icons/gitactions.png",
   },
   {
-    name: "Shopify",
-    icon: "logos:shopify",
+    name: "Kafka",
+    icon: "/icons/kafka.png",
   },
   {
-    name: "Node.js",
-    icon: "logos:nodejs-icon",
+    name: "Pandas",
+    icon: "logos:pandas-icon",
+  },
+  {
+    name: "Dask",
+    icon: "/icons/dask_icon.webp",
+  },
+  {
+    name: "SciPy",
+    icon: "/icons/scipy.png",
+  },
+  {
+    name: "Chroma DB",
+    icon: "/icons/chroma-seeklogo.png",
+  },
+  {
+    name: "MySQL",
+    icon: "logos:mysql",
   },
 ] as const;
